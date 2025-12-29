@@ -1,0 +1,24 @@
+.wa-profile-main {
+    height: 100vh;
+    background: #151515;
+    display: flex;
+}
+
+.wa-profile-main__center {
+    margin: auto;
+    text-align: center;
+    opacity: .9;
+}
+
+.wa-profile-main__icon {
+    font-size: 56px;
+    opacity: .55;
+    margin-bottom: 14px;
+}
+
+.wa-profile-main__title {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    color: #eaeaea;
+}

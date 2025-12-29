@@ -1,0 +1,100 @@
+.wa-profile-side{
+    height: 100vh;
+    background: #111;
+    color: #eaeaea;
+    border-right: 1px solid rgba(255,255,255,.06);
+}
+
+.wa-profile-side__top{
+    height: 56px;
+    display:flex;
+    align-items:center;
+    padding: 0 10px;
+    background: rgba(255,255,255,.03);
+    gap: 10px;
+}
+
+.wa-profile-side__title{
+    font-weight: 600;
+    flex: 1;
+}
+
+/* Botones (flecha o cruz) */
+.wa-profile-side__back,
+.wa-profile-side__close{
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    color: rgba(234,234,234,.9);
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wa-profile-side__back:hover,
+.wa-profile-side__close:hover{
+    background: rgba(255,255,255,.06);
+}
+
+/* Flecha: solo en celu */
+.wa-profile-side__back{ display: none; }
+@media (max-width: 720px){
+    .wa-profile-side__back{ display: grid; }
+}
+
+.wa-profile-side__content{
+    padding: 18px 18px 24px;
+}
+
+.wa-profile-side__avatar{
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 18px;
+}
+
+.wa-profile-side__avatar img,
+.wa-profile-side__avatarFallback{
+    width: 110px;
+    height: 110px;
+    border-radius: 999px;
+    object-fit: cover;
+    background: rgba(255,255,255,.08);
+}
+
+.wa-profile-side__avatarFallback{
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.wa-profile-side__block{
+    padding: 16px 0;
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.wa-profile-side__label{
+    font-size: 12px;
+    opacity: .7;
+    margin-bottom: 10px;
+}
+
+.wa-profile-side__value{
+    font-size: 14px;
+}
+
+.wa-profile-side__value--row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.wa-profile-side__copy{
+    opacity: .8;
+    cursor: pointer;
+    user-select: none;
+}
+.wa-profile-side__copy:hover{ opacity: 1; }

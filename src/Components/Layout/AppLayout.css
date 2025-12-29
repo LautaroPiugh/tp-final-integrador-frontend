@@ -1,0 +1,71 @@
+.wa-app{
+    height: 100dvh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+}
+
+.wa-sidebar{
+    min-width: 0;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.wa-main{
+    min-width: 0;
+    background: var(--bg);
+    overflow: hidden;
+    display: flex;
+}
+
+.wa-main > *{
+    flex: 1;
+    min-width: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .wa-app--profile .wa-sidebar {
+        display: none;
+    }
+
+    .wa-app--profile .wa-main {
+        width: 100%;
+    }
+}
+
+/* Mobile: 1 columna, alterna sidebar / main según estado */
+@media (max-width: 767px){
+    .wa-app{ grid-template-columns: 1fr; }
+    .wa-main{ display: none; }
+
+    .wa-app.wa-app--home .wa-sidebar{ display: block; }
+    .wa-app.wa-app--home .wa-main{ display: none; }
+
+    .wa-app.wa-app--chat .wa-sidebar{ display: none; }
+    .wa-app.wa-app--chat .wa-main{ display: flex; }
+
+    .wa-app.wa-app--profile .wa-sidebar{ display: none; }
+    .wa-app.wa-app--profile .wa-main{ display: flex; }
+}
+
+/* Profile */
+/* Tablet + Mobile: en /profile solo el panel (sidebar) */
+@media (max-width: 900px) {
+    .wa-app.wa-app--profile {
+        grid-template-columns: 1fr;
+    }
+
+    .wa-app.wa-app--profile .wa-sidebar {
+        display: block;
+        border-right: none;
+    }
+
+    .wa-app.wa-app--profile .wa-main {
+        display: none;
+    }
+}
