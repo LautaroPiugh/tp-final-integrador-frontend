@@ -5,7 +5,7 @@ import { FiSearch, FiMoreVertical } from "react-icons/fi";
 import { FiSend } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
-import {MdAttachFile, MdStarOutline, MdNotificationsOff, MdShield, MdLockOutline, MdFavoriteBorder, MdBlock, MdThumbDownOffAlt, MdDeleteOutline,} from "react-icons/md";
+import { MdAttachFile, MdStarOutline, MdNotificationsOff, MdShield, MdLockOutline, MdFavoriteBorder, MdBlock, MdThumbDownOffAlt, MdDeleteOutline, } from "react-icons/md";
 import { FiX } from "react-icons/fi";
 
 export default function MessagesScreen() {
@@ -50,15 +50,15 @@ export default function MessagesScreen() {
             <section className="wa-chat" aria-label={`Chat con ${title}`}>
                 {/* HEADER */}
                 <header className="wa-chat__header">
-                        <button
-                            type="button"
-                            className="wa-back"
-                            onClick={() => navigate("/")}
-                            aria-label="Volver"
-                            title="Volver"
-                        >
-                            <FiArrowLeft />
-                        </button>
+                    <button
+                        type="button"
+                        className="wa-back"
+                        onClick={() => navigate("/")}
+                        aria-label="Volver"
+                        title="Volver"
+                    >
+                        <FiArrowLeft />
+                    </button>
 
                     <button
                         type="button"
@@ -104,11 +104,11 @@ export default function MessagesScreen() {
                             <div className="wa-msg__bubble">
                                 <span className="wa-msg__text">{String(m.content ?? "")}</span>
                                 <span className="wa-msg__time">
-                  {new Date(m.created_at).toLocaleTimeString([], {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                  })}
-                </span>
+                                    {new Date(m.created_at).toLocaleTimeString([], {
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                    })}
+                                </span>
                             </div>
                         </div>
                     ))}
@@ -174,35 +174,35 @@ export default function MessagesScreen() {
                             <span className="wa-info__ico"><MdNotificationsOff /></span>
                             <span className="wa-info__txt">Silenciar notificaciones</span>
                             <span className="wa-info__right">
-          <label className="wa-switch">
-            <input type="checkbox" />
-            <span className="wa-switch__track" />
-          </label>
-        </span>
+                                <label className="wa-switch">
+                                    <input type="checkbox" />
+                                    <span className="wa-switch__track" />
+                                </label>
+                            </span>
                         </div>
 
                         <button className="wa-info__item" type="button">
                             <span className="wa-info__ico"><MdShield /></span>
                             <span className="wa-info__txt">
-          Mensajes temporales
-          <small>Desactivados</small>
-        </span>
+                                Mensajes temporales
+                                <small>Desactivados</small>
+                            </span>
                         </button>
 
                         <button className="wa-info__item" type="button">
                             <span className="wa-info__ico"><MdShield /></span>
                             <span className="wa-info__txt">
-          Privacidad avanzada del chat
-          <small>Desactivado</small>
-        </span>
+                                Privacidad avanzada del chat
+                                <small>Desactivado</small>
+                            </span>
                         </button>
 
                         <button className="wa-info__item" type="button">
                             <span className="wa-info__ico"><MdLockOutline /></span>
                             <span className="wa-info__txt">
-          Cifrado
-          <small>Los mensajes están cifrados de extremo a extremo.</small>
-        </span>
+                                Cifrado
+                                <small>Los mensajes están cifrados de extremo a extremo.</small>
+                            </span>
                         </button>
 
                         <div className="wa-info__sep" />

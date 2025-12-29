@@ -38,7 +38,7 @@
     }
 }
 
-/* Mobile: 1 columna, alterna sidebar / main según estado */
+/* query mobile*/
 @media (max-width: 767px){
     .wa-app{ grid-template-columns: 1fr; }
     .wa-main{ display: none; }
@@ -53,8 +53,8 @@
     .wa-app.wa-app--profile .wa-main{ display: flex; }
 }
 
-/* Profile */
-/* Tablet + Mobile: en /profile solo el panel (sidebar) */
+/* perfil */
+/* tablet y mobile: en perfil solo ver estado y datos */
 @media (max-width: 900px) {
     .wa-app.wa-app--profile {
         grid-template-columns: 1fr;
