@@ -1,7 +1,7 @@
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import ContactSidebar from "../ContactSidebar/ContactSidebar";
-import ProfileSidebar from "../Profile/ProfileSidebar";
+import ProfileSidebar from "../Profile/ProfileSideBar";
 import "./AppLayout.css";
 
 export default function AppLayout() {
